@@ -1,4 +1,4 @@
-package sioa.taco_cloud.web;
+package sioa.taco_cloud.controller;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import org.springframework.web.bind.support.SessionStatus;
-import sioa.taco_cloud.TacoOrder;
+import sioa.taco_cloud.model.TacoOrder;
 
 @Slf4j
 @Controller

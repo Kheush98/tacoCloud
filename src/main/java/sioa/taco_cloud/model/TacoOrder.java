@@ -1,4 +1,4 @@
-package sioa.taco_cloud;
+package sioa.taco_cloud.model;
 
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
@@ -6,11 +6,17 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
-public class TacoOrder {
+public class TacoOrder implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private long id;
+    private Date placedAt;
     @NotBlank(message = "Name is required")
     private String deliveryName;
     @NotBlank(message = "Street is required")
